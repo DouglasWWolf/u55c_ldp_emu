@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-220,-224",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port pcie_refclk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port pcie_mgt -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD -left
+preplace inst pcie -pg 1 -lvl 1 -x 150 -y 40 -swap {39 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 69 37 38 0 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 36 70 71 72 73 74 75} -defaultsOSRD -pinDir M_AXI_B right -pinY M_AXI_B 100R -pinDir pcie_refclk left -pinY pcie_refclk 40L -pinDir S_AXI_B right -pinY S_AXI_B 20R -pinDir pcie_mgt left -pinY pcie_mgt 20L -pinDir axi_aclk right -pinY axi_aclk 120R -pinDir axi_aresetn right -pinY axi_aresetn 250R
+preplace inst laguna_dp_emulator -pg 1 -lvl 3 -x 690 -y 40 -swap {20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 38 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 0 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77} -defaultsOSRD -pinDir S_AXI_CONFIG left -pinY S_AXI_CONFIG 100L -pinDir S_AXI_SF_CTL left -pinY S_AXI_SF_CTL 120L -pinDir M_AXI left -pinY M_AXI 20L -pinDir clk left -pinY clk 140L -pinDir resetn left -pinY resetn 160L
+preplace inst smartconnect -pg 1 -lvl 2 -x 420 -y 120 -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir M01_AXI right -pinY M01_AXI 40R -pinDir M02_AXI right -pinY M02_AXI 170R -pinDir aclk left -pinY aclk 40L -pinDir aresetn left -pinY aresetn 170L
+preplace inst axi_revision -pg 1 -lvl 3 -x 690 -y 270 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir AXI_ACLK left -pinY AXI_ACLK 40L -pinDir AXI_ARESETN left -pinY AXI_ARESETN 60L
+preplace netloc pcie_axi_aclk 1 1 2 280 80 560
+preplace netloc source_200Mhz_resetn 1 1 2 280 350 580
+preplace netloc laguna_dp_emulator_M_AXI 1 1 2 NJ 60 NJ
+preplace netloc pcie_refclk_1 1 0 1 NJ 80
+preplace netloc smartconnect_M00_AXI 1 2 1 N 140
+preplace netloc smartconnect_M01_AXI 1 2 1 N 160
+preplace netloc smartconnect_M02_AXI 1 2 1 N 290
+preplace netloc xdma_0_M_AXI_B 1 1 1 N 140
+preplace netloc xdma_0_pcie_mgt 1 0 1 NJ 60
+levelinfo -pg 1 0 150 420 690 790
+pagesize -pg 1 -db -bbox -sgen -130 0 790 390
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-556,-123",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port clk_200mhz -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace portBus clk -pg 1 -lvl 3 -x 670 -y 60 -defaultsOSRD
+preplace portBus resetn -pg 1 -lvl 3 -x 670 -y 220 -defaultsOSRD
+preplace inst proc_sys_reset -pg 1 -lvl 2 -x 470 -y 180 -defaultsOSRD
+preplace inst clock_buffer_100MHz -pg 1 -lvl 1 -x 150 -y 60 -defaultsOSRD
+preplace inst one -pg 1 -lvl 1 -x 150 -y 160 -defaultsOSRD
+preplace netloc clock_buffer_100MHz_IBUF_OUT 1 1 2 280 60 NJ
+preplace netloc one_dout 1 1 1 NJ 160
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 1 NJ 220
+preplace netloc CLK_IN_D_0_1 1 0 1 NJ 60
+levelinfo -pg 1 0 150 470 670
+pagesize -pg 1 -db -bbox -sgen -140 0 800 280
+"
+}
+{
+   "da_axi4_cnt":"7"
+}
