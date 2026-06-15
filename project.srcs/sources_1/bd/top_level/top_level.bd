@@ -1927,14 +1927,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -1990,14 +1982,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2053,14 +2037,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2092,10 +2068,6 @@
                       "PROTOCOL": {
                         "value": "AXI4",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
                       },
                       "ID_WIDTH": {
                         "value": "4",
@@ -2180,10 +2152,6 @@
                       "MAX_BURST_LENGTH": {
                         "value": "256",
                         "value_src": "auto"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "address_space_ref": "M_AXI",
@@ -2390,14 +2358,6 @@
                       "ASSOCIATED_RESET": {
                         "value": "resetn",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     }
                   },
@@ -2900,8 +2860,8 @@
                 "ports": [
                   "clk",
                   "system_ila/clk",
-                  "ldp_manager/clk",
-                  "ldp_buffer/clk"
+                  "ldp_buffer/clk",
+                  "ldp_manager/clk"
                 ]
               },
               "ldp_buffer_dropped_frame_number": {
@@ -2955,8 +2915,8 @@
               "ldp_emu_config_FRAME_SIZE": {
                 "ports": [
                   "FRAME_SIZE",
-                  "ldp_manager/FRAME_SIZE",
-                  "ldp_buffer/frame_size"
+                  "ldp_buffer/frame_size",
+                  "ldp_manager/FRAME_SIZE"
                 ]
               },
               "ldp_emu_config_MD0_RING_ADDR": {
@@ -2998,8 +2958,8 @@
               "mindy_core_reset_external_resetn": {
                 "ports": [
                   "resetn",
-                  "ldp_manager/resetn",
-                  "ldp_buffer/resetn"
+                  "ldp_buffer/resetn",
+                  "ldp_manager/resetn"
                 ]
               }
             }
