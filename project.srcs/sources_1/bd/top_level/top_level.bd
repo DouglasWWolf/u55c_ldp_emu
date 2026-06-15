@@ -7,8 +7,7 @@
       "name": "top_level",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2024.2",
-      "validated": "true"
+      "tool_version": "2024.2"
     },
     "design_tree": {
       "pcie": {
@@ -2569,14 +2568,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2632,14 +2623,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2695,14 +2678,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2758,14 +2733,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2821,14 +2788,6 @@
                       "HAS_TLAST": {
                         "value": "0",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     },
                     "port_maps": {
@@ -2861,14 +2820,6 @@
                       "ASSOCIATED_RESET": {
                         "value": "resetn",
                         "value_src": "constant"
-                      },
-                      "FREQ_HZ": {
-                        "value": "250000000",
-                        "value_src": "user_prop"
-                      },
-                      "CLK_DOMAIN": {
-                        "value": "top_level_xdma_0_1_axi_aclk",
-                        "value_src": "default_prop"
                       }
                     }
                   },
@@ -2949,8 +2900,8 @@
                 "ports": [
                   "clk",
                   "system_ila/clk",
-                  "ldp_buffer/clk",
-                  "ldp_manager/clk"
+                  "ldp_manager/clk",
+                  "ldp_buffer/clk"
                 ]
               },
               "ldp_buffer_dropped_frame_number": {
@@ -3004,8 +2955,8 @@
               "ldp_emu_config_FRAME_SIZE": {
                 "ports": [
                   "FRAME_SIZE",
-                  "ldp_buffer/frame_size",
-                  "ldp_manager/FRAME_SIZE"
+                  "ldp_manager/FRAME_SIZE",
+                  "ldp_buffer/frame_size"
                 ]
               },
               "ldp_emu_config_MD0_RING_ADDR": {
@@ -3047,8 +2998,8 @@
               "mindy_core_reset_external_resetn": {
                 "ports": [
                   "resetn",
-                  "ldp_buffer/resetn",
-                  "ldp_manager/resetn"
+                  "ldp_manager/resetn",
+                  "ldp_buffer/resetn"
                 ]
               }
             }
