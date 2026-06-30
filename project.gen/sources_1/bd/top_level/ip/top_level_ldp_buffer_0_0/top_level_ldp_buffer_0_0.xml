@@ -1191,7 +1191,17 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DATA_FIFO_DEPTH</spirit:name>
         <spirit:displayName>Data Fifo Depth</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_FIFO_DEPTH">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_FIFO_DEPTH">32768</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>DATA_FIFO_SECTIONS</spirit:name>
+        <spirit:displayName>Data Fifo Sections</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_FIFO_SECTIONS">4</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>DATA_FIFO_RAM_TYPE</spirit:name>
+        <spirit:displayName>Data Fifo Ram Type</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_FIFO_RAM_TYPE">block</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SUPPORT_FIFO_DEPTH</spirit:name>
@@ -1217,7 +1227,17 @@
     <spirit:parameter>
       <spirit:name>DATA_FIFO_DEPTH</spirit:name>
       <spirit:displayName>Data Fifo Depth</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_FIFO_DEPTH">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_FIFO_DEPTH">32768</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>DATA_FIFO_SECTIONS</spirit:name>
+      <spirit:displayName>Data Fifo Sections</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_FIFO_SECTIONS">4</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>DATA_FIFO_RAM_TYPE</spirit:name>
+      <spirit:displayName>Data Fifo Ram Type</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.DATA_FIFO_RAM_TYPE">block</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SUPPORT_FIFO_DEPTH</spirit:name>

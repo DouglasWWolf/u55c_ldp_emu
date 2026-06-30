@@ -1818,7 +1818,7 @@
                 "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
                 "vlnv": "xilinx.com:interface:axis_rtl:1.0"
               },
-              "SLOT_0_AXI": {
+              "M_AXI": {
                 "mode": "Master",
                 "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
@@ -2849,7 +2849,7 @@
               },
               "ldp_manager_M_AXI": {
                 "interface_ports": [
-                  "SLOT_0_AXI",
+                  "M_AXI",
                   "ldp_manager/M_AXI",
                   "system_ila/SLOT_0_AXI"
                 ]
@@ -2860,8 +2860,8 @@
                 "ports": [
                   "clk",
                   "system_ila/clk",
-                  "ldp_buffer/clk",
-                  "ldp_manager/clk"
+                  "ldp_manager/clk",
+                  "ldp_buffer/clk"
                 ]
               },
               "ldp_buffer_dropped_frame_number": {
@@ -2915,8 +2915,8 @@
               "ldp_emu_config_FRAME_SIZE": {
                 "ports": [
                   "FRAME_SIZE",
-                  "ldp_buffer/frame_size",
-                  "ldp_manager/FRAME_SIZE"
+                  "ldp_manager/FRAME_SIZE",
+                  "ldp_buffer/frame_size"
                 ]
               },
               "ldp_emu_config_MD0_RING_ADDR": {
@@ -2958,8 +2958,8 @@
               "mindy_core_reset_external_resetn": {
                 "ports": [
                   "resetn",
-                  "ldp_buffer/resetn",
-                  "ldp_manager/resetn"
+                  "ldp_manager/resetn",
+                  "ldp_buffer/resetn"
                 ]
               }
             }
@@ -2981,7 +2981,7 @@
           "ldp_manager_M_AXI": {
             "interface_ports": [
               "M_AXI",
-              "ldp_manager/SLOT_0_AXI"
+              "ldp_manager/M_AXI"
             ]
           },
           "metadata_gen_AXIS_MD": {

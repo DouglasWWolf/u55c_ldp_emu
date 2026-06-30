@@ -9,13 +9,17 @@
     "parameters": {
       "component_parameters": {
         "DW": [ { "value": "512", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "DATA_FIFO_DEPTH": [ { "value": "16", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DATA_FIFO_DEPTH": [ { "value": "32768", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DATA_FIFO_SECTIONS": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "DATA_FIFO_RAM_TYPE": [ { "value": "block", "resolve_type": "user", "usage": "all" } ],
         "SUPPORT_FIFO_DEPTH": [ { "value": "16", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "top_level_ldp_buffer_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
         "DW": [ { "value": "512", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "DATA_FIFO_DEPTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DATA_FIFO_DEPTH": [ { "value": "32768", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DATA_FIFO_SECTIONS": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "DATA_FIFO_RAM_TYPE": [ { "value": "block", "resolve_type": "generated", "usage": "all" } ],
         "SUPPORT_FIFO_DEPTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {

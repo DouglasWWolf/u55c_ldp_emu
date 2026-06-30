@@ -4,29 +4,91 @@
    "Default View_TopLeft":"-220,-224",
    "DisplayTieOff":"1",
    "ExpandedHierarchyInLayout":"",
-   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"/laguna_dp_emulator|/laguna_dp_emulator/ldp_manager",
    "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 preplace port pcie_refclk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
 preplace port pcie_mgt -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD -left
 preplace inst pcie -pg 1 -lvl 1 -x 150 -y 40 -swap {39 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 71 37 38 0 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 36 72 73 74 75 76 77} -defaultsOSRD -pinDir M_AXI_B right -pinY M_AXI_B 100R -pinDir pcie_refclk left -pinY pcie_refclk 40L -pinDir S_AXI_B right -pinY S_AXI_B 20R -pinDir pcie_mgt left -pinY pcie_mgt 20L -pinDir axi_aclk right -pinY axi_aclk 120R -pinDir axi_aresetn right -pinY axi_aresetn 250R
-preplace inst laguna_dp_emulator -pg 1 -lvl 3 -x 690 -y 40 -swap {20 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 38 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 0 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75} -defaultsOSRD -pinDir S_AXI_CONFIG left -pinY S_AXI_CONFIG 100L -pinDir S_AXI_SF_CTL left -pinY S_AXI_SF_CTL 120L -pinDir M_AXI left -pinY M_AXI 20L -pinDir clk left -pinY clk 140L -pinDir resetn left -pinY resetn 160L
+preplace inst laguna_dp_emulator -pg 1 -lvl 3 -x 860 -y 40 -defaultsOSRD -pinDir S_AXI_CONFIG left -pinY S_AXI_CONFIG 240L -pinDir S_AXI_SF_CTL left -pinY S_AXI_SF_CTL 260L -pinDir M_AXI left -pinY M_AXI 280L -pinDir clk left -pinY clk 360L -pinDir resetn left -pinY resetn 380L
 preplace inst smartconnect -pg 1 -lvl 2 -x 420 -y 120 -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir M01_AXI right -pinY M01_AXI 40R -pinDir M02_AXI right -pinY M02_AXI 170R -pinDir aclk left -pinY aclk 40L -pinDir aresetn left -pinY aresetn 170L
-preplace inst axi_revision -pg 1 -lvl 3 -x 690 -y 270 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir AXI_ACLK left -pinY AXI_ACLK 40L -pinDir AXI_ARESETN left -pinY AXI_ARESETN 60L
-preplace netloc pcie_axi_aclk 1 1 2 280 80 560
-preplace netloc source_200Mhz_resetn 1 1 2 280 350 580
-preplace netloc laguna_dp_emulator_M_AXI 1 1 2 NJ 60 NJ
+preplace inst axi_revision -pg 1 -lvl 3 -x 860 -y 1060 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir AXI_ACLK left -pinY AXI_ACLK 40L -pinDir AXI_ARESETN left -pinY AXI_ARESETN 60L
+preplace inst laguna_dp_emulator|metadata_gen -pg 1 -lvl 4 -x 2250 -y 180 -swap {0 1 2 3 6 4 5 7} -defaultsOSRD -pinDir AXIS_MD right -pinY AXIS_MD 80R -pinDir clk left -pinY clk 60L -pinDir resetn left -pinY resetn 20L -pinDir generate_md left -pinY generate_md 40L -pinBusDir MD_FIXED left -pinBusY MD_FIXED 80L
+preplace inst laguna_dp_emulator|simframe_gen -pg 1 -lvl 2 -x 1440 -y 80 -swap {0 1 2 3 4 5 6 7 8 10 9 11 12} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 40L -pinDir AXIS_OUT right -pinY AXIS_OUT 20R -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 60L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 100L -pinDir start_of_frame right -pinY start_of_frame 60R
+preplace inst laguna_dp_emulator|simframe_ctl -pg 1 -lvl 1 -x 1010 -y 360 -defaultsOSRD -pinDir AXIS_OUT right -pinY AXIS_OUT 20R -pinDir S_AXI left -pinY S_AXI 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir resetn_out right -pinY resetn_out 40R
+preplace inst laguna_dp_emulator|stamp_sensor_hdr -pg 1 -lvl 3 -x 1850 -y 80 -swap {0 1 2 3 4 5 6 7 10 8 12 13 11 9} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 20L -pinDir AXIS_OUT right -pinY AXIS_OUT 140R -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 40L -pinDir enable left -pinY enable 120L -pinBusDir frame_header left -pinBusY frame_header 140L -pinBusDir frame_size left -pinBusY frame_size 100L -pinDir start_of_frame left -pinY start_of_frame 60L
+preplace inst laguna_dp_emulator|ldp_emu_config -pg 1 -lvl 1 -x 1010 -y 520 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 25 26 27 28 29 30 31 32 33 34 24 23} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinBusDir FRAME_SIZE right -pinBusY FRAME_SIZE 20R -pinBusDir BYTES_PER_USEC right -pinBusY BYTES_PER_USEC 80R -pinBusDir FD0_RING_ADDR right -pinBusY FD0_RING_ADDR 270R -pinBusDir FD1_RING_ADDR right -pinBusY FD1_RING_ADDR 290R -pinBusDir FD_RING_SIZE right -pinBusY FD_RING_SIZE 310R -pinBusDir MD0_RING_ADDR right -pinBusY MD0_RING_ADDR 330R -pinBusDir MD1_RING_ADDR right -pinBusY MD1_RING_ADDR 350R -pinBusDir MD_RING_SIZE right -pinBusY MD_RING_SIZE 370R -pinBusDir FC0_ADDR right -pinBusY FC0_ADDR 390R -pinBusDir FC1_ADDR right -pinBusY FC1_ADDR 410R -pinBusDir METADATA right -pinBusY METADATA 430R -pinBusDir sensor_hdr right -pinBusY sensor_hdr 60R -pinDir sensor_hdr_enable right -pinY sensor_hdr_enable 40R
+preplace inst laguna_dp_emulator|rate_limiter -pg 1 -lvl 4 -x 2250 -y 380 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12 14} -defaultsOSRD -pinDir AXIS_IN left -pinY AXIS_IN 20L -pinDir AXIS_OUT right -pinY AXIS_OUT 190R -pinDir clk left -pinY clk 60L -pinDir resetn left -pinY resetn 40L -pinBusDir BYTES_PER_USEC left -pinBusY BYTES_PER_USEC 220L
+preplace inst laguna_dp_emulator|ldp_manager -pg 1 -lvl 5 -x 2700 -y 360 -defaultsOSRD -pinDir axis_fd left -pinY axis_fd 210L -pinDir axis_md left -pinY axis_md 230L -pinDir M_AXI right -pinY M_AXI 350R -pinDir clk left -pinY clk 250L -pinDir resetn left -pinY resetn 310L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 330L -pinBusDir FD0_RING_ADDR left -pinBusY FD0_RING_ADDR 430L -pinBusDir FD1_RING_ADDR left -pinBusY FD1_RING_ADDR 450L -pinBusDir FD_RING_SIZE left -pinBusY FD_RING_SIZE 470L -pinBusDir MD0_RING_ADDR left -pinBusY MD0_RING_ADDR 490L -pinBusDir MD1_RING_ADDR left -pinBusY MD1_RING_ADDR 510L -pinBusDir MD_RING_SIZE left -pinBusY MD_RING_SIZE 530L -pinBusDir FC0_ADDR left -pinBusY FC0_ADDR 550L -pinBusDir FC1_ADDR left -pinBusY FC1_ADDR 570L
+preplace inst laguna_dp_emulator|ldp_manager|ldp_manager -pg 1 -lvl 2 -x 3340 -y 550 -swap {4 1 2 3 0 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61} -defaultsOSRD -pinDir axis_fd left -pinY axis_fd 40L -pinDir axis_ferr left -pinY axis_ferr 20L -pinDir axis_md left -pinY axis_md 60L -pinDir M_AXI right -pinY M_AXI 20R -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 200L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 220L -pinBusDir FD0_RING_ADDR left -pinBusY FD0_RING_ADDR 240L -pinBusDir FD1_RING_ADDR left -pinBusY FD1_RING_ADDR 260L -pinBusDir FD_RING_SIZE left -pinBusY FD_RING_SIZE 280L -pinBusDir MD0_RING_ADDR left -pinBusY MD0_RING_ADDR 300L -pinBusDir MD1_RING_ADDR left -pinBusY MD1_RING_ADDR 320L -pinBusDir MD_RING_SIZE left -pinBusY MD_RING_SIZE 340L -pinBusDir FC0_ADDR left -pinBusY FC0_ADDR 360L -pinBusDir FC1_ADDR left -pinBusY FC1_ADDR 380L -pinBusDir max_frame_cycles right -pinBusY max_frame_cycles 40R -pinBusDir min_frame_cycles right -pinBusY min_frame_cycles 60R -pinDir start_of_frame right -pinY start_of_frame 80R
+preplace inst laguna_dp_emulator|ldp_manager|system_ila -pg 1 -lvl 3 -x 3660 -y 390 -swap {38 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 0 39 40 41 42 43 47 48 49 44 45 46 50} -defaultsOSRD -pinDir SLOT_0_AXI left -pinY SLOT_0_AXI 40L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 20L -pinDir clk left -pinY clk 60L -pinBusDir probe0 left -pinBusY probe0 200L -pinBusDir probe1 left -pinBusY probe1 220L -pinBusDir probe2 left -pinBusY probe2 240L -pinBusDir probe3 left -pinBusY probe3 80L -pinBusDir probe4 left -pinBusY probe4 100L -pinBusDir probe5 left -pinBusY probe5 120L -pinDir resetn left -pinY resetn 260L
+preplace inst laguna_dp_emulator|ldp_manager|ldp_buffer -pg 1 -lvl 1 -x 2840 -y 550 -swap {0 1 2 3 8 5 6 7 4 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26} -defaultsOSRD -pinDir axis_fd_in left -pinY axis_fd_in 20L -pinDir axis_fd_out right -pinY axis_fd_out 40R -pinDir axis_ferr right -pinY axis_ferr 20R -pinDir axis_md_in left -pinY axis_md_in 40L -pinDir axis_md_out right -pinY axis_md_out 60R -pinDir clk left -pinY clk 60L -pinDir resetn left -pinY resetn 120L -pinBusDir frame_size left -pinBusY frame_size 140L -pinDir dropped_frame_stb right -pinY dropped_frame_stb 80R -pinBusDir dropped_frame_number right -pinBusY dropped_frame_number 100R -pinDir fatal_overflow_stb right -pinY fatal_overflow_stb 120R -pinDir discard_input right -pinY discard_input 140R
+preplace netloc pcie_axi_aclk 1 1 2 280 80 600
+preplace netloc source_200Mhz_resetn 1 1 2 280 350 560
+preplace netloc laguna_dp_emulator_M_AXI 1 1 2 NJ 60 660J
 preplace netloc pcie_refclk_1 1 0 1 NJ 80
-preplace netloc smartconnect_M00_AXI 1 2 1 N 140
-preplace netloc smartconnect_M01_AXI 1 2 1 N 160
-preplace netloc smartconnect_M02_AXI 1 2 1 N 290
+preplace netloc smartconnect_M00_AXI 1 2 1 640 140n
+preplace netloc smartconnect_M01_AXI 1 2 1 620 160n
+preplace netloc smartconnect_M02_AXI 1 2 1 580 290n
 preplace netloc xdma_0_M_AXI_B 1 1 1 N 140
 preplace netloc xdma_0_pcie_mgt 1 0 1 NJ 60
-levelinfo -pg 1 0 150 420 690 790
-pagesize -pg 1 -db -bbox -sgen -130 0 790 390
+preplace netloc laguna_dp_emulator|clk_1 1 0 5 850 480 1210 240 1670 300 2090 340 2410J
+preplace netloc laguna_dp_emulator|ldp_emu_config_BYTES_PER_USEC 1 1 3 N 600 NJ 600 NJ
+preplace netloc laguna_dp_emulator|ldp_emu_config_FC0_ADDR 1 1 4 NJ 910 NJ 910 NJ 910 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_FC1_ADDR 1 1 4 NJ 930 NJ 930 NJ 930 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_FD0_RING_ADDR 1 1 4 NJ 790 NJ 790 NJ 790 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_FD1_RING_ADDR 1 1 4 NJ 810 NJ 810 NJ 810 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_FD_RING_SIZE 1 1 4 NJ 830 NJ 830 NJ 830 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_FRAME_SIZE 1 1 4 1230 260 1690 690 NJ 690 NJ
+preplace netloc laguna_dp_emulator|ldp_emu_config_MD0_RING_ADDR 1 1 4 NJ 850 NJ 850 NJ 850 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_MD1_RING_ADDR 1 1 4 NJ 870 NJ 870 NJ 870 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_MD_RING_SIZE 1 1 4 NJ 890 NJ 890 NJ 890 N
+preplace netloc laguna_dp_emulator|ldp_emu_config_METADATA 1 1 3 NJ 950 NJ 950 2070
+preplace netloc laguna_dp_emulator|ldp_emu_config_sensor_hdr 1 1 2 1270 300 1630J
+preplace netloc laguna_dp_emulator|ldp_emu_config_sensor_hdr_enable 1 1 2 1250 280 1610J
+preplace netloc laguna_dp_emulator|mindy_core_reset_external_resetn 1 1 4 1170 40 1650 40 2050 670 NJ
+preplace netloc laguna_dp_emulator|resetn_1 1 0 1 810 420n
+preplace netloc laguna_dp_emulator|simframe_gen_start_of_frame 1 2 2 1650 280 2030J
+preplace netloc laguna_dp_emulator|S_AXI_MC_CONFIG_1 1 0 1 830 280n
+preplace netloc laguna_dp_emulator|S_AXI_SF_CTL_1 1 0 1 810 300n
+preplace netloc laguna_dp_emulator|ldp_manager_M_AXI 1 0 6 NJ 320 NJ 320 NJ 320 NJ 320 NJ 320 3860
+preplace netloc laguna_dp_emulator|metadata_gen_AXIS_MD 1 4 1 2430 260n
+preplace netloc laguna_dp_emulator|rate_limiter_AXIS_OUT 1 4 1 N 570
+preplace netloc laguna_dp_emulator|simframe_ctl_AXIS_OUT 1 1 1 1190 120n
+preplace netloc laguna_dp_emulator|simframe_gen_AXIS_OUT 1 2 1 N 100
+preplace netloc laguna_dp_emulator|stamp_sensor_hdr_AXIS_OUT 1 3 1 2010 220n
+preplace netloc laguna_dp_emulator|ldp_manager|clk_1 1 0 3 2630 510 3110 450 NJ
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_buffer_dropped_frame_number 1 1 2 3090 490 NJ
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_buffer_dropped_frame_stb 1 1 2 3050 470 NJ
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_buffer_fatal_overflow_stb 1 1 2 3130 510 NJ
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_FC0_ADDR 1 0 2 NJ 910 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_FC1_ADDR 1 0 2 NJ 930 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_FD0_RING_ADDR 1 0 2 NJ 790 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_FD1_RING_ADDR 1 0 2 NJ 810 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_FD_RING_SIZE 1 0 2 NJ 830 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_FRAME_SIZE 1 0 2 2610 770 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_MD0_RING_ADDR 1 0 2 NJ 850 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_MD1_RING_ADDR 1 0 2 NJ 870 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_emu_config_MD_RING_SIZE 1 0 2 NJ 890 N
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_manager_max_frame_cycles 1 2 1 N 590
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_manager_min_frame_cycles 1 2 1 N 610
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_manager_start_of_frame 1 2 1 N 630
+preplace netloc laguna_dp_emulator|ldp_manager|mindy_core_reset_external_resetn 1 0 2 2630 750 N
+preplace netloc laguna_dp_emulator|ldp_manager|axis_fd_1 1 0 1 N 570
+preplace netloc laguna_dp_emulator|ldp_manager|axis_md_1 1 0 1 N 590
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_buffer_axis_md_out 1 1 1 N 610
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_buffer_axis_out 1 1 1 N 590
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_buffer_frame_status 1 1 2 3070 410 NJ
+preplace netloc laguna_dp_emulator|ldp_manager|ldp_manager_M_AXI 1 2 2 3550 710 NJ
+levelinfo -pg 1 0 150 420 860 3900
+levelinfo -hier laguna_dp_emulator * 1010 1440 1850 2250 2700 *
+levelinfo -hier laguna_dp_emulator|ldp_manager * 2840 3340 3660 *
+pagesize -pg 1 -db -bbox -sgen -130 0 3900 1180
+pagesize -hier laguna_dp_emulator -db -bbox -sgen 780 30 3880 1010
+pagesize -hier laguna_dp_emulator|ldp_manager -db -bbox -sgen 2580 350 3790 990
 ",
    "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-556,-123",
+   "No Loops_TopLeft":"2151,312",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port clk_200mhz -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
